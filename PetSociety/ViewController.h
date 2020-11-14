@@ -9,6 +9,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *petSplashScreen;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *petSplasHeightConstraint;
+
 
 @end
 

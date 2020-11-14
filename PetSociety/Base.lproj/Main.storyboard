@@ -1,24 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pet_society_splash" translatesAutoresizingMaskIntoConstraints="NO" id="n2L-ee-8Gt">
+                                <rect key="frame" x="20" y="318.5" width="374" height="269"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n2L-ee-8Gt" secondAttribute="trailing" constant="20" id="85S-2j-Reh"/>
+                            <constraint firstItem="n2L-ee-8Gt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="H2Z-6x-c3L"/>
+                            <constraint firstItem="n2L-ee-8Gt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RZy-hJ-fAq"/>
+                            <constraint firstItem="n2L-ee-8Gt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TPE-Br-r15"/>
+                            <constraint firstItem="n2L-ee-8Gt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="h34-Qa-8nv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="petSplasHeightConstraint" destination="h34-Qa-8nv" id="zju-Sf-Qty"/>
+                        <outlet property="petSplashScreen" destination="n2L-ee-8Gt" id="AsI-oO-JjZ"/>
+                        <segue destination="lhE-Dw-uYN" kind="show" identifier="mainTabbarController" id="sec-Nc-LUV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="QaV-yM-xfe">
+            <objects>
+                <tableViewController id="yDv-9x-88E" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nms-nL-cTf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TJP-DQ-f9k">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TJP-DQ-f9k" id="c0U-KV-Gb3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yDv-9x-88E" id="9rE-sw-1Og"/>
+                            <outlet property="delegate" destination="yDv-9x-88E" id="qho-6K-nVC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Ely-aE-REn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbf-ak-kM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="1641"/>
+        </scene>
+        <!--Razas-->
+        <scene sceneID="xew-Iv-ibt">
+            <objects>
+                <navigationController id="LJC-gL-RiB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Razas" image="dog" selectedImage="dog_fill" id="Rby-aH-hsi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rlH-5G-kLP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yDv-9x-88E" kind="relationship" relationship="rootViewController" id="uOU-lB-RI4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r33-Eq-Oj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="915"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UTF-58-gjC">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="lhE-Dw-uYN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cXG-VF-w9b"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QMF-gT-hzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7XH-MK-nbe" kind="relationship" relationship="viewControllers" id="CLR-De-H1u"/>
+                        <segue destination="rF2-ke-ATS" kind="relationship" relationship="viewControllers" id="MBy-RK-dLE"/>
+                        <segue destination="LJC-gL-RiB" kind="relationship" relationship="viewControllers" id="Cr8-a8-Kia"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVL-oH-oq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="94"/>
+        </scene>
+        <!--Raza preferida.-->
+        <scene sceneID="EJU-pb-qrL">
+            <objects>
+                <viewController title="Raza preferida." id="7XH-MK-nbe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a3e-xg-oiE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raza de perro." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JR-NJ-7L2">
+                                <rect key="frame" x="32" y="60" width="190" height="27"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog.placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-Q3-1iQ">
+                                <rect key="frame" x="32" y="132" width="350" height="337"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Fu-bi4">
+                                <rect key="frame" x="312" y="152" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="XEz-Ka-ctD"/>
+                                    <constraint firstAttribute="height" constant="45" id="hzZ-mO-E6E"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="placeholderTextColor"/>
+                                <state key="normal" image="star" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dC-A9-Un5">
+                                <rect key="frame" x="217" y="501" width="165" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjK-Ub-Iwz">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="7EK-U5-sFd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                        <state key="normal" title="Ver mas"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mfg-sL-UjF">
+                                        <rect key="frame" x="120" y="1" width="45" height="42.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="lay-4w-3Ul"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="oBJ-rv-55m"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A0s-Sl-50O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ibp-Fu-bi4" firstAttribute="top" secondItem="LKe-Q3-1iQ" secondAttribute="top" constant="20" id="1ab-KF-Miv"/>
+                            <constraint firstItem="A0s-Sl-50O" firstAttribute="trailing" secondItem="LKe-Q3-1iQ" secondAttribute="trailing" constant="32" id="3tU-Pw-NZ9"/>
+                            <constraint firstItem="6JR-NJ-7L2" firstAttribute="top" secondItem="A0s-Sl-50O" secondAttribute="top" constant="60" id="4IB-1q-OHL"/>
+                            <constraint firstItem="LKe-Q3-1iQ" firstAttribute="trailing" secondItem="ibp-Fu-bi4" secondAttribute="trailing" constant="25" id="cZe-Ug-QZl"/>
+                            <constraint firstItem="6JR-NJ-7L2" firstAttribute="leading" secondItem="A0s-Sl-50O" secondAttribute="leading" constant="32" id="eU8-AH-znN"/>
+                            <constraint firstItem="LKe-Q3-1iQ" firstAttribute="height" secondItem="a3e-xg-oiE" secondAttribute="height" multiplier="0.4" id="hLv-nv-qlT"/>
+                            <constraint firstItem="LKe-Q3-1iQ" firstAttribute="top" secondItem="6JR-NJ-7L2" secondAttribute="bottom" constant="45" id="k2y-u5-O02"/>
+                            <constraint firstItem="8dC-A9-Un5" firstAttribute="top" secondItem="LKe-Q3-1iQ" secondAttribute="bottom" constant="32" id="pmd-qn-7u0"/>
+                            <constraint firstItem="LKe-Q3-1iQ" firstAttribute="leading" secondItem="A0s-Sl-50O" secondAttribute="leading" constant="32" id="qoZ-a0-swL"/>
+                            <constraint firstAttribute="trailing" secondItem="8dC-A9-Un5" secondAttribute="trailing" constant="32" id="tAC-TW-2MR"/>
+                            <constraint firstItem="LKe-Q3-1iQ" firstAttribute="centerX" secondItem="A0s-Sl-50O" secondAttribute="centerX" id="xZ0-wN-wHr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Preferencia" image="star" catalog="system" selectedImage="star.fill" id="ly4-kZ-iYx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ega-TA-Ovx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434.78260869565219" y="914.73214285714278"/>
+        </scene>
+        <!--Fotografiar-->
+        <scene sceneID="Tw5-bH-Xhz">
+            <objects>
+                <viewController id="rF2-ke-ATS" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HGe-Oh-ycM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1cs-AK-HgR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fotografiar" image="camera" catalog="system" selectedImage="camera.fill" id="pcN-SW-p0v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DY1-ID-HoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="915"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="dog" width="16" height="16"/>
+        <image name="dog.placeHolder" width="64" height="64"/>
+        <image name="dog_fill" width="16" height="16"/>
+        <image name="pet_society_splash" width="270" height="187"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
