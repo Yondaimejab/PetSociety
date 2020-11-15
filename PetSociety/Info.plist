@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>La aplicacion utiliza tu libreria de photos para guardar las imagenes de tus perros.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>La applicacion utiliza tu camara para guardar las fotos de tus perros.</string>
+	<string>La aplicacion utiliza tu camara para guardar las fotos de tus perros.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

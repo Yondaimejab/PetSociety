@@ -11,10 +11,12 @@
 
 +(void) initialize:(NSString *)withName :(NSString *)imageURL :(NSMutableArray<DogBreed *> *)dogBreed {
     [self initialize];
+    
 }
 
 +(void) initialize:(NSDictionary *)dict {
     [self initialize];
     
 }
+
 @end
