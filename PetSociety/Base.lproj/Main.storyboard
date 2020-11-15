@@ -110,7 +110,7 @@
         <!--Raza preferida.-->
         <scene sceneID="EJU-pb-qrL">
             <objects>
-                <viewController title="Raza preferida." id="7XH-MK-nbe" sceneMemberID="viewController">
+                <viewController title="Raza preferida." id="7XH-MK-nbe" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3e-xg-oiE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,58 +121,79 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog.placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-Q3-1iQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog_placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-Q3-1iQ">
                                 <rect key="frame" x="32" y="132" width="350" height="337"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowIsEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-Fu-bi4">
-                                <rect key="frame" x="312" y="152" width="45" height="45"/>
+                                <rect key="frame" x="312" y="404" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="XEz-Ka-ctD"/>
                                     <constraint firstAttribute="height" constant="45" id="hzZ-mO-E6E"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="placeholderTextColor"/>
-                                <state key="normal" image="star" catalog="system"/>
+                                <state key="normal" image="star_empty"/>
+                                <connections>
+                                    <action selector="selectPreferedBreedAction:" destination="7XH-MK-nbe" eventType="touchUpInside" id="5wo-UB-n1i"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dC-A9-Un5">
-                                <rect key="frame" x="217" y="501" width="165" height="45"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjK-Ub-Iwz">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="7EK-U5-sFd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
-                                        <state key="normal" title="Ver mas"/>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mfg-sL-UjF">
-                                        <rect key="frame" x="120" y="1" width="45" height="42.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="lay-4w-3Ul"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjK-Ub-Iwz">
+                                <rect key="frame" x="262" y="509" width="120" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="oBJ-rv-55m"/>
+                                    <constraint firstAttribute="width" constant="120" id="7EK-U5-sFd"/>
+                                    <constraint firstAttribute="height" constant="28" id="7hK-zb-rwt"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <state key="normal" title="Ver mas">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="seeMoreBreedsAction:" destination="7XH-MK-nbe" eventType="touchUpInside" id="tcA-su-FFM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A0s-Sl-50O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ibp-Fu-bi4" firstAttribute="top" secondItem="LKe-Q3-1iQ" secondAttribute="top" constant="20" id="1ab-KF-Miv"/>
+                            <constraint firstItem="LKe-Q3-1iQ" firstAttribute="bottom" secondItem="ibp-Fu-bi4" secondAttribute="bottom" constant="20" id="1ab-KF-Miv"/>
                             <constraint firstItem="A0s-Sl-50O" firstAttribute="trailing" secondItem="LKe-Q3-1iQ" secondAttribute="trailing" constant="32" id="3tU-Pw-NZ9"/>
                             <constraint firstItem="6JR-NJ-7L2" firstAttribute="top" secondItem="A0s-Sl-50O" secondAttribute="top" constant="60" id="4IB-1q-OHL"/>
+                            <constraint firstItem="qjK-Ub-Iwz" firstAttribute="top" secondItem="LKe-Q3-1iQ" secondAttribute="bottom" constant="40" id="8sS-2w-llV"/>
+                            <constraint firstItem="A0s-Sl-50O" firstAttribute="trailing" secondItem="qjK-Ub-Iwz" secondAttribute="trailing" constant="32" id="YQV-yf-rWy"/>
                             <constraint firstItem="LKe-Q3-1iQ" firstAttribute="trailing" secondItem="ibp-Fu-bi4" secondAttribute="trailing" constant="25" id="cZe-Ug-QZl"/>
                             <constraint firstItem="6JR-NJ-7L2" firstAttribute="leading" secondItem="A0s-Sl-50O" secondAttribute="leading" constant="32" id="eU8-AH-znN"/>
                             <constraint firstItem="LKe-Q3-1iQ" firstAttribute="height" secondItem="a3e-xg-oiE" secondAttribute="height" multiplier="0.4" id="hLv-nv-qlT"/>
                             <constraint firstItem="LKe-Q3-1iQ" firstAttribute="top" secondItem="6JR-NJ-7L2" secondAttribute="bottom" constant="45" id="k2y-u5-O02"/>
-                            <constraint firstItem="8dC-A9-Un5" firstAttribute="top" secondItem="LKe-Q3-1iQ" secondAttribute="bottom" constant="32" id="pmd-qn-7u0"/>
                             <constraint firstItem="LKe-Q3-1iQ" firstAttribute="leading" secondItem="A0s-Sl-50O" secondAttribute="leading" constant="32" id="qoZ-a0-swL"/>
-                            <constraint firstAttribute="trailing" secondItem="8dC-A9-Un5" secondAttribute="trailing" constant="32" id="tAC-TW-2MR"/>
                             <constraint firstItem="LKe-Q3-1iQ" firstAttribute="centerX" secondItem="A0s-Sl-50O" secondAttribute="centerX" id="xZ0-wN-wHr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Preferencia" image="star" catalog="system" selectedImage="star.fill" id="ly4-kZ-iYx"/>
+                    <tabBarItem key="tabBarItem" title="Preferencia" image="star_empty" selectedImage="prefered_fill_star" id="ly4-kZ-iYx"/>
+                    <connections>
+                        <outlet property="moreBreedsButton" destination="qjK-Ub-Iwz" id="Wp7-gA-6ze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ega-TA-Ovx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,31 +206,110 @@
                     <view key="view" contentMode="scaleToFill" id="HGe-Oh-ycM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotografia tu perro." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftv-ZB-zPJ">
+                                <rect key="frame" x="32" y="60" width="249.5" height="27"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DogPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="HXd-J5-xDu">
+                                <rect key="frame" x="32" y="132" width="359" height="337"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowIsEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGray2Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFx-x5-TdG">
+                                <rect key="frame" x="262" y="509" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="5US-7w-s8G"/>
+                                    <constraint firstAttribute="height" constant="28" id="U1p-xI-C0u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <state key="normal" title="Tomar foto">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePhotoAction:" destination="rF2-ke-ATS" eventType="touchUpInside" id="PwT-VY-yGF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_fill" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-nZ-wLX">
+                                <rect key="frame" x="228" y="509" width="30" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ZYp-BZ-Ubd"/>
+                                    <constraint firstAttribute="width" constant="30" id="tnN-QL-b9Y"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1cs-AK-HgR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eFx-x5-TdG" firstAttribute="top" secondItem="HXd-J5-xDu" secondAttribute="bottom" constant="40" id="KG4-Sb-elm"/>
+                            <constraint firstItem="HXd-J5-xDu" firstAttribute="height" secondItem="HGe-Oh-ycM" secondAttribute="height" multiplier="0.4" id="LZT-GD-SbA"/>
+                            <constraint firstItem="HXd-J5-xDu" firstAttribute="leading" secondItem="1cs-AK-HgR" secondAttribute="leading" constant="32" id="Uc9-6T-xhk"/>
+                            <constraint firstItem="aE7-nZ-wLX" firstAttribute="top" secondItem="eFx-x5-TdG" secondAttribute="top" id="XAW-1W-CYR"/>
+                            <constraint firstItem="Ftv-ZB-zPJ" firstAttribute="leading" secondItem="1cs-AK-HgR" secondAttribute="leading" constant="32" id="aoY-7P-qzn"/>
+                            <constraint firstItem="Ftv-ZB-zPJ" firstAttribute="top" secondItem="1cs-AK-HgR" secondAttribute="top" constant="60" id="hMu-Cd-xFc"/>
+                            <constraint firstItem="HXd-J5-xDu" firstAttribute="top" secondItem="Ftv-ZB-zPJ" secondAttribute="bottom" constant="45" id="mwy-lI-POt"/>
+                            <constraint firstItem="eFx-x5-TdG" firstAttribute="leading" secondItem="aE7-nZ-wLX" secondAttribute="trailing" constant="4" id="nhH-4M-f9A"/>
+                            <constraint firstItem="1cs-AK-HgR" firstAttribute="trailing" secondItem="eFx-x5-TdG" secondAttribute="trailing" constant="32" id="oXX-nY-kd5"/>
+                            <constraint firstItem="1cs-AK-HgR" firstAttribute="trailing" secondItem="HXd-J5-xDu" secondAttribute="trailing" constant="23" id="xwP-Zl-8Hl"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fotografiar" image="camera" catalog="system" selectedImage="camera.fill" id="pcN-SW-p0v"/>
+                    <tabBarItem key="tabBarItem" title="Fotografiar" image="camera_Empty" selectedImage="camera_fill" id="pcN-SW-p0v"/>
+                    <connections>
+                        <outlet property="cameraImageView" destination="aE7-nZ-wLX" id="5MD-rn-bYI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DY1-ID-HoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="915"/>
+            <point key="canvasLocation" x="1193" y="905"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
-        <image name="camera" catalog="system" width="128" height="94"/>
-        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="DogPlaceholder" width="600" height="400"/>
+        <image name="camera_Empty" width="32" height="32"/>
+        <image name="camera_fill" width="32" height="32"/>
         <image name="dog" width="16" height="16"/>
-        <image name="dog.placeHolder" width="64" height="64"/>
         <image name="dog_fill" width="16" height="16"/>
+        <image name="dog_placeHolder" width="64" height="64"/>
         <image name="pet_society_splash" width="270" height="187"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="prefered_fill_star" width="32" height="32"/>
+        <image name="star_empty" width="32" height="32"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

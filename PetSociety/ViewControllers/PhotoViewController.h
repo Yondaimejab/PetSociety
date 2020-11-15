@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PhotoViewController : UIImagePickerController
+@interface PhotoViewController : UIViewController <UINavigationControllerDelegate ,UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *cameraImageView;
 
 @end
 

@@ -16,7 +16,9 @@
 		2C2C1BA0256019B200F10A8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1B9F256019B200F10A8C /* main.m */; };
 		2C2C1BAA256019B200F10A8C /* PetSocietyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BA9256019B200F10A8C /* PetSocietyTests.m */; };
 		2C2C1BB5256019B200F10A8C /* PetSocietyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BB4256019B200F10A8C /* PetSocietyUITests.m */; };
-		2C2C1BCE25603DDE00F10A8C /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BCD25603DDE00F10A8C /* PhotoViewController.m */; };
+		2C2C1BD72560B9DC00F10A8C /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BD62560B9DC00F10A8C /* PhotoViewController.m */; };
+		2C2C1BDD2560C51900F10A8C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BDC2560C51900F10A8C /* HomeViewController.m */; };
+		2C2C1BE62560C6D100F10A8C /* UIView+UIView_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BE52560C6D100F10A8C /* UIView+UIView_Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +57,12 @@
 		2C2C1BB0256019B200F10A8C /* PetSocietyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetSocietyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2C1BB4256019B200F10A8C /* PetSocietyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetSocietyUITests.m; sourceTree = "<group>"; };
 		2C2C1BB6256019B200F10A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C2C1BCC25603DDE00F10A8C /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
-		2C2C1BCD25603DDE00F10A8C /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		2C2C1BD52560B9DC00F10A8C /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		2C2C1BD62560B9DC00F10A8C /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		2C2C1BDB2560C51900F10A8C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2C2C1BDC2560C51900F10A8C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2C2C1BE42560C6D100F10A8C /* UIView+UIView_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UIView_Category.h"; sourceTree = "<group>"; };
+		2C2C1BE52560C6D100F10A8C /* UIView+UIView_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIView_Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		2C2C1B8C256019AF00F10A8C /* PetSociety */ = {
 			isa = PBXGroup;
 			children = (
+				2C2C1BE22560C60200F10A8C /* Supporting Files */,
 				2C2C1BCB25603D9D00F10A8C /* ViewControllers */,
 				2C2C1B8D256019AF00F10A8C /* AppDelegate.h */,
 				2C2C1B8E256019AF00F10A8C /* AppDelegate.m */,
@@ -144,10 +151,21 @@
 		2C2C1BCB25603D9D00F10A8C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C2C1BCC25603DDE00F10A8C /* PhotoViewController.h */,
-				2C2C1BCD25603DDE00F10A8C /* PhotoViewController.m */,
+				2C2C1BD52560B9DC00F10A8C /* PhotoViewController.h */,
+				2C2C1BD62560B9DC00F10A8C /* PhotoViewController.m */,
+				2C2C1BDB2560C51900F10A8C /* HomeViewController.h */,
+				2C2C1BDC2560C51900F10A8C /* HomeViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C2C1BE22560C60200F10A8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C1BE42560C6D100F10A8C /* UIView+UIView_Category.h */,
+				2C2C1BE52560C6D100F10A8C /* UIView+UIView_Category.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +301,9 @@
 				2C2C1B8F256019AF00F10A8C /* AppDelegate.m in Sources */,
 				2C2C1BA0256019B200F10A8C /* main.m in Sources */,
 				2C2C1B92256019AF00F10A8C /* SceneDelegate.m in Sources */,
-				2C2C1BCE25603DDE00F10A8C /* PhotoViewController.m in Sources */,
+				2C2C1BD72560B9DC00F10A8C /* PhotoViewController.m in Sources */,
+				2C2C1BE62560C6D100F10A8C /* UIView+UIView_Category.m in Sources */,
+				2C2C1BDD2560C51900F10A8C /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
