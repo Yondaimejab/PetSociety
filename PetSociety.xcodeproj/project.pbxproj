@@ -19,6 +19,10 @@
 		2C2C1BD72560B9DC00F10A8C /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BD62560B9DC00F10A8C /* PhotoViewController.m */; };
 		2C2C1BDD2560C51900F10A8C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BDC2560C51900F10A8C /* HomeViewController.m */; };
 		2C2C1BE62560C6D100F10A8C /* UIView+UIView_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BE52560C6D100F10A8C /* UIView+UIView_Category.m */; };
+		2C2C1BFB25615C5000F10A8C /* ApiRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1BFA25615C5000F10A8C /* ApiRoutes.m */; };
+		2C2C1C0325615E8200F10A8C /* ApiEndPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1C0225615E8200F10A8C /* ApiEndPoints.m */; };
+		2C2C1C0C25616B9200F10A8C /* BreedsApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1C0B25616B9200F10A8C /* BreedsApiRequest.m */; };
+		2C40FE332561790C00B936B5 /* DogBreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C40FE322561790C00B936B5 /* DogBreed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,13 @@
 		2C2C1BDC2560C51900F10A8C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2C2C1BE42560C6D100F10A8C /* UIView+UIView_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UIView_Category.h"; sourceTree = "<group>"; };
 		2C2C1BE52560C6D100F10A8C /* UIView+UIView_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIView_Category.m"; sourceTree = "<group>"; };
+		2C2C1BF925615C3C00F10A8C /* ApiRoutes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiRoutes.h; sourceTree = "<group>"; };
+		2C2C1BFA25615C5000F10A8C /* ApiRoutes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiRoutes.m; sourceTree = "<group>"; };
+		2C2C1C0225615E8200F10A8C /* ApiEndPoints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiEndPoints.m; sourceTree = "<group>"; };
+		2C2C1C0A25616B8100F10A8C /* BreedsApiRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreedsApiRequest.h; sourceTree = "<group>"; };
+		2C2C1C0B25616B9200F10A8C /* BreedsApiRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreedsApiRequest.m; sourceTree = "<group>"; };
+		2C40FE312561790C00B936B5 /* DogBreed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DogBreed.h; sourceTree = "<group>"; };
+		2C40FE322561790C00B936B5 /* DogBreed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogBreed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +124,8 @@
 		2C2C1B8C256019AF00F10A8C /* PetSociety */ = {
 			isa = PBXGroup;
 			children = (
+				2C40FE30256178E500B936B5 /* Model */,
+				2C2C1BF025615ABB00F10A8C /* Api */,
 				2C2C1BE22560C60200F10A8C /* Supporting Files */,
 				2C2C1BCB25603D9D00F10A8C /* ViewControllers */,
 				2C2C1B8D256019AF00F10A8C /* AppDelegate.h */,
@@ -166,6 +179,27 @@
 				2C2C1BE52560C6D100F10A8C /* UIView+UIView_Category.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C2C1BF025615ABB00F10A8C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C1BF925615C3C00F10A8C /* ApiRoutes.h */,
+				2C2C1BFA25615C5000F10A8C /* ApiRoutes.m */,
+				2C2C1C0225615E8200F10A8C /* ApiEndPoints.m */,
+				2C2C1C0A25616B8100F10A8C /* BreedsApiRequest.h */,
+				2C2C1C0B25616B9200F10A8C /* BreedsApiRequest.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		2C40FE30256178E500B936B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C40FE312561790C00B936B5 /* DogBreed.h */,
+				2C40FE322561790C00B936B5 /* DogBreed.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +333,15 @@
 			files = (
 				2C2C1B95256019AF00F10A8C /* ViewController.m in Sources */,
 				2C2C1B8F256019AF00F10A8C /* AppDelegate.m in Sources */,
+				2C2C1BFB25615C5000F10A8C /* ApiRoutes.m in Sources */,
+				2C40FE332561790C00B936B5 /* DogBreed.m in Sources */,
+				2C2C1C0C25616B9200F10A8C /* BreedsApiRequest.m in Sources */,
 				2C2C1BA0256019B200F10A8C /* main.m in Sources */,
 				2C2C1B92256019AF00F10A8C /* SceneDelegate.m in Sources */,
 				2C2C1BD72560B9DC00F10A8C /* PhotoViewController.m in Sources */,
 				2C2C1BE62560C6D100F10A8C /* UIView+UIView_Category.m in Sources */,
 				2C2C1BDD2560C51900F10A8C /* HomeViewController.m in Sources */,
+				2C2C1C0325615E8200F10A8C /* ApiEndPoints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

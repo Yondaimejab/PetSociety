@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="139" y="94"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Listado de Razas-->
         <scene sceneID="QaV-yM-xfe">
             <objects>
                 <tableViewController id="yDv-9x-88E" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                             <outlet property="delegate" destination="yDv-9x-88E" id="qho-6K-nVC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Ely-aE-REn"/>
+                    <navigationItem key="navigationItem" title="Listado de Razas" id="Ely-aE-REn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbf-ak-kM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
