@@ -30,7 +30,7 @@
             [self.activityIndicator startAnimating];
         });
     } else {
-        [BreedsApiRequest sendRequest: randomBreedImage:0 andCompletionHandler:^(NSDictionary * dict) {
+        [BreedsApiRequest sendRequest: randomBreedImage andCompletionHandler:^(NSDictionary * dict) {
             NSLog(@"%@",dict);
             if ([dict[@"status"] isEqual: @"success"]) {
                 self.imageUrl = dict[@"message"];

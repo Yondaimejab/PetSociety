@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2622632561F15E005DB755 /* BreedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2622622561F15E005DB755 /* BreedsTableViewController.m */; };
+		2C26226C25620E1E005DB755 /* BreedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C26226B25620E1E005DB755 /* BreedDetailViewController.m */; };
 		2C2C1B8F256019AF00F10A8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1B8E256019AF00F10A8C /* AppDelegate.m */; };
 		2C2C1B92256019AF00F10A8C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1B91256019AF00F10A8C /* SceneDelegate.m */; };
 		2C2C1B95256019AF00F10A8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C1B94256019AF00F10A8C /* ViewController.m */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C2622612561F15E005DB755 /* BreedsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreedsTableViewController.h; sourceTree = "<group>"; };
+		2C2622622561F15E005DB755 /* BreedsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreedsTableViewController.m; sourceTree = "<group>"; };
+		2C26226A25620E1E005DB755 /* BreedDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreedDetailViewController.h; sourceTree = "<group>"; };
+		2C26226B25620E1E005DB755 /* BreedDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreedDetailViewController.m; sourceTree = "<group>"; };
 		2C2C1B8A256019AF00F10A8C /* PetSociety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetSociety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2C1B8D256019AF00F10A8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C2C1B8E256019AF00F10A8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -168,6 +174,10 @@
 				2C2C1BD62560B9DC00F10A8C /* PhotoViewController.m */,
 				2C2C1BDB2560C51900F10A8C /* HomeViewController.h */,
 				2C2C1BDC2560C51900F10A8C /* HomeViewController.m */,
+				2C2622612561F15E005DB755 /* BreedsTableViewController.h */,
+				2C2622622561F15E005DB755 /* BreedsTableViewController.m */,
+				2C26226A25620E1E005DB755 /* BreedDetailViewController.h */,
+				2C26226B25620E1E005DB755 /* BreedDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -337,9 +347,11 @@
 				2C40FE332561790C00B936B5 /* DogBreed.m in Sources */,
 				2C2C1C0C25616B9200F10A8C /* BreedsApiRequest.m in Sources */,
 				2C2C1BA0256019B200F10A8C /* main.m in Sources */,
+				2C2622632561F15E005DB755 /* BreedsTableViewController.m in Sources */,
 				2C2C1B92256019AF00F10A8C /* SceneDelegate.m in Sources */,
 				2C2C1BD72560B9DC00F10A8C /* PhotoViewController.m in Sources */,
 				2C2C1BE62560C6D100F10A8C /* UIView+UIView_Category.m in Sources */,
+				2C26226C25620E1E005DB755 /* BreedDetailViewController.m in Sources */,
 				2C2C1BDD2560C51900F10A8C /* HomeViewController.m in Sources */,
 				2C2C1C0325615E8200F10A8C /* ApiEndPoints.m in Sources */,
 			);

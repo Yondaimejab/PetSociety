@@ -10,6 +10,10 @@
 
 @interface ApiRoutes : NSObject
 
-+(NSString *) getRequestURL: (ApiEndPoints) route :(NSInteger) value;
++(NSString *) getRequestURL:(ApiEndPoints)route;
+
++(NSString *) getRequestURL: (ApiEndPoints) route :(NSInteger) value :(NSString *) breedName;
+
++(NSString *) getRequestURL:(ApiEndPoints)route :(NSInteger)value :(NSString *)breedName :(NSString *)subBreedName;
 
 @end

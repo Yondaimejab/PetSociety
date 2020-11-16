@@ -9,14 +9,11 @@
 
 @implementation DogBreed
 
-+(void) initialize:(NSString *)withName :(NSString *)imageURL :(NSMutableArray<DogBreed *> *)dogBreed {
-    [self initialize];
-    
-}
-
-+(void) initialize:(NSDictionary *)dict {
-    [self initialize];
-    
++ (DogBreed *)initWithName:(NSString *)name :(NSMutableArray<DogBreed *> *)subBreeds {
+    DogBreed *breed = DogBreed.new;
+    breed.name = name;
+    breed.subBreeds = subBreeds;
+    return breed;
 }
 
 @end

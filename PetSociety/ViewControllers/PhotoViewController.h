@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PhotoViewController : UIViewController <UINavigationControllerDelegate ,UIImagePickerControllerDelegate>
+@interface PhotoViewController : UIViewController <UINavigationControllerDelegate , UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *dogImageView;
 @property (nonatomic) BOOL isSavingEnabled;
 

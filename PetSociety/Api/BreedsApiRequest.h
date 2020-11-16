@@ -10,6 +10,10 @@
 
 @interface BreedsApiRequest : NSObject
 
-+(void) sendRequest: (ApiEndPoints)toEndPoint :(NSInteger)value andCompletionHandler:(void (^)(NSDictionary *))completionHandler;
++(void) sendRequest: (ApiEndPoints)toEndPoint andCompletionHandler:(void (^)(NSDictionary *))completionHandler;
+
++(void) sendRequest: (ApiEndPoints)toEndPoint :(NSInteger)value :(NSString *)breedName andCompletionHandler:(void (^)(NSDictionary *))completionHandler;
+
++(void) sendRequest: (ApiEndPoints)toEndPoint :(NSInteger)value :(NSString *)breedName :(NSString *) subBreedName andCompletionHandler:(void (^)(NSDictionary *))completionHandler;
 
 @end

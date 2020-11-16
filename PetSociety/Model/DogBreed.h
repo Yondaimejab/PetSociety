@@ -15,8 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *imageURL;
 @property (strong, nonatomic) NSMutableArray<DogBreed *> *subBreeds;
 
-+(void) initialize: (NSString*)withName :(NSString*)imageURL :(NSMutableArray<DogBreed *>*)dogBreed;
-+(void) initialize: (NSDictionary *)dict;
++(DogBreed *) initWithName: (NSString *)name :(NSMutableArray<DogBreed *> *)subBreeds;
 
 @end
 

@@ -10,8 +10,6 @@
 typedef enum ApiEndPoints: NSInteger {
     listOfBreeds,
     randomBreedImage,
-    seletedbreedImage,
-    subBreedImages,
-    subBreedRandomImage,
-    SubBreedSelectedImage
+    imageByBreed,
+    imageBySubBreed
 } ApiEndPoints;
