@@ -66,6 +66,18 @@
     }];
 }
 
+- (IBAction)setPreferedBreed:(id)sender {
+    [self.preferences setObject:self.breed.imageURL forKey:@"preferedUserImageURL"];
+    [self.preferences setObject:self.breed.name forKey:@"breedName"];
+    if (self.isSubBreed) {
+        [self.preferences setObject: self.superBeed forKey:@"parentBreed"];
+    }else {
+        [self.preferences setObject: @"" forKey:@"parentBreed"];
+    }
+    [self.preferedBreedButton setImage:[UIImage imageNamed:@"star_fill"] forState:UIControlStateNormal];
+    self.isPreferedBreed = true;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

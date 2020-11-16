@@ -22,13 +22,34 @@
     [self presentHomeImage];
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (![self.imageUrl isEqual:[self.preferences stringForKey: @"preferedUserImageURL"]]) {
+        self.imageUrl = [self.preferences stringForKey: @"preferedUserImageURL"];
+        [self presentHomeImage];
+    }
+}
+
 -(void) presentHomeImage {
-    if (self.imageUrl) {
-        [self downloadAndReplaceImage:self.imageUrl];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.indicatorContainerView setHidden:false];
-            [self.activityIndicator startAnimating];
-        });
+    if (self.imageUrl && ![self.imageUrl isEqual:@""]) {
+        NSString *parentBreed = [self.preferences stringForKey:@"parentBreed"];
+        NSString *preferedBreed = [self.preferences stringForKey:@"breedName"];;
+        if (parentBreed && ![parentBreed isEqual:@""]) {
+            if (preferedBreed && ![preferedBreed isEqual:@""]) {
+                [self getPictureForSubBreed:preferedBreed :parentBreed];
+            } else {
+                NSLog(@"Verify why would there be a subBreed with no parentBreed");
+            }
+        } else if (preferedBreed && ![preferedBreed isEqual:@""]) {
+            [self getPictureForBreed:preferedBreed];
+        } else {
+            [self downloadAndReplaceImage:self.imageUrl];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorContainerView setHidden:false];
+                [self.activityIndicator startAnimating];
+                [self.favoriteSelectionButton setImage:[UIImage imageNamed:@"star_fill"] forState:UIControlStateNormal];
+            });
+        }
     } else {
         [BreedsApiRequest sendRequest: randomBreedImage andCompletionHandler:^(NSDictionary * dict) {
             NSLog(@"%@",dict);
@@ -42,6 +63,38 @@
             }
         }];
     }
+}
+
+-(void) getPictureForBreed: (NSString *)breedName {
+    [BreedsApiRequest sendRequest:imageByBreed :1 :breedName andCompletionHandler:^(NSDictionary * dict) {
+        NSLog(@"%@",dict);
+        if ([dict[@"status"] isEqual: @"success"]) {
+            self.imageUrl = [dict[@"message"] firstObject];
+            [self downloadAndReplaceImage: self.imageUrl];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorContainerView setHidden:false];
+                [self.activityIndicator startAnimating];
+                [self.favoriteSelectionButton setImage:[UIImage imageNamed:@"star_fill"] forState:UIControlStateNormal];
+            });
+        }
+    }];
+}
+
+-(void) getPictureForSubBreed: (NSString *)subBread :(NSString *)superBreed {
+    [BreedsApiRequest sendRequest:imageBySubBreed :1 :superBreed  :subBread andCompletionHandler:^(NSDictionary *dict) {
+        NSLog(@"%@",dict);
+        if ([dict[@"status"] isEqual: @"success"]) {
+            self.imageUrl = [dict[@"message"] firstObject];
+            [self downloadAndReplaceImage: self.imageUrl];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorContainerView setHidden:false];
+                [self.activityIndicator startAnimating];
+                [self.favoriteSelectionButton setImage:[UIImage imageNamed:@"star_fill"] forState:UIControlStateNormal];
+            });
+        }else {
+            NSLog(@"loglog");
+        }
+    }];
 }
 
 - (IBAction)selectPreferedBreedAction:(id)sender {

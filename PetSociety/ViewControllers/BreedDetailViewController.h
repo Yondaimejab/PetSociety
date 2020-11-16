@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic) BOOL isSubBreed;
 @property (nonatomic) NSString * superBeed;
+@property (weak, nonatomic) IBOutlet UIButton *preferedBreedButton;
+@property (nonatomic) BOOL isPreferedBreed;
 
 @end
 

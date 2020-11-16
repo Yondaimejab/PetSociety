@@ -123,13 +123,26 @@
                                 <rect key="frame" x="32" y="324" width="256" height="155"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVt-SE-yTG">
+                                <rect key="frame" x="242" y="78" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Af3-bg-erS"/>
+                                    <constraint firstAttribute="width" constant="45" id="nL9-A4-5qj"/>
+                                </constraints>
+                                <state key="normal" image="star_empty"/>
+                                <connections>
+                                    <action selector="setPreferedBreed:" destination="ytg-dd-QkJ" eventType="touchUpInside" id="44v-4f-0X4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i6Y-gz-dSh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mvq-qh-SYs" firstAttribute="centerY" secondItem="lSc-sf-Vcj" secondAttribute="centerY" id="2t0-2p-p7q"/>
                             <constraint firstItem="to5-Nj-09O" firstAttribute="leading" secondItem="i6Y-gz-dSh" secondAttribute="leading" constant="32" id="8hP-yQ-Qa6"/>
+                            <constraint firstItem="QVt-SE-yTG" firstAttribute="top" secondItem="to5-Nj-09O" secondAttribute="top" constant="-8" id="BPq-3W-Suv"/>
                             <constraint firstItem="i6Y-gz-dSh" firstAttribute="bottom" secondItem="XIV-2X-ofu" secondAttribute="bottom" constant="20" id="Cv3-Fi-6wO"/>
+                            <constraint firstItem="QVt-SE-yTG" firstAttribute="leading" secondItem="to5-Nj-09O" secondAttribute="trailing" constant="20" id="DS6-5P-gFl"/>
                             <constraint firstItem="lSc-sf-Vcj" firstAttribute="top" secondItem="to5-Nj-09O" secondAttribute="bottom" constant="8" symbolic="YES" id="DcY-gN-pU9"/>
                             <constraint firstItem="to5-Nj-09O" firstAttribute="top" secondItem="i6Y-gz-dSh" secondAttribute="top" constant="30" id="SB6-wO-ggf"/>
                             <constraint firstItem="XIV-2X-ofu" firstAttribute="leading" secondItem="i6Y-gz-dSh" secondAttribute="leading" constant="32" id="bAB-1c-fUV"/>
@@ -147,6 +160,7 @@
                         <outlet property="activityIndicator" destination="oei-lk-SjO" id="jq2-J2-JqI"/>
                         <outlet property="dogImageView" destination="lSc-sf-Vcj" id="cNA-LN-qgP"/>
                         <outlet property="indicatorContainerView" destination="mvq-qh-SYs" id="laq-ik-v5e"/>
+                        <outlet property="preferedBreedButton" destination="QVt-SE-yTG" id="uV5-PT-SzL"/>
                         <outlet property="subBreedTableView" destination="XIV-2X-ofu" id="Z4B-7D-RKJ"/>
                     </connections>
                 </viewController>
